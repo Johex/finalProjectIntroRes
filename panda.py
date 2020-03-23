@@ -1,6 +1,6 @@
 import pandas as pd
 
-ev2018 = pd.read_csv("EVs2018.csv")
-ev2019 = pd.read_csv("EVs2018.csv")
+df = pd.read_csv("data.csv")
 
-print(pd.DataFrame.equals(ev2019, ev2018))
+
+pd.crosstab(index=df['ev'], columns=df['year'])

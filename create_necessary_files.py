@@ -12,7 +12,7 @@ def export_csv():
             for row in csv_reader:
                 if row[11] == '' and row[12] == '' and row[20] == row[21]:
                     writer.writerow([row[0], True, str(row[21])[:4]])
-                elif row[0] != "Kenteken":
+                elif row[0] != "Kenteken" and row[20] == row[21]:
                     writer.writerow([row[0], False, str(row[21])[:4]])
 
 
