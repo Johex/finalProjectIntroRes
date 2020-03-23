@@ -12,10 +12,10 @@ def export_ev(year):
             for row in csv_reader:
                 if year == 2018:
                     if row[11] == '' and row[12] == '' and row[20] == row[21] and row[21] < str(year + 1) + "0101":
-                        writer.writerow([row[0], row[20], row[21]])
+                        writer.writerow([row[0]])
                 else:
                     if row[11] == '' and row[12] == '' and row[20] == row[21] and row[21] >= str(year) + "0101":
-                        writer.writerow([row[0], row[20], row[21]])
+                        writer.writerow([row[0]])
 
 
 def export_non_ev(year):
@@ -27,10 +27,10 @@ def export_non_ev(year):
             for row in csv_reader:
                 if year == 2018:
                     if (row[11] != '' or row[12] != '') and row[20] == row[21] and row[21] < str(year + 1) + "0101":
-                        writer.writerow([row[0], row[21], row[20]])
+                        writer.writerow([row[0]])
                 else:
                     if (row[11] != '' or row[12] != '') and row[20] == row[21] and row[21] > str(year) + "0101":
-                        writer.writerow([row[0], row[21], row[20]])
+                        writer.writerow([row[0]])
 
 
 def main():
